@@ -31,11 +31,11 @@ resource "aws_instance" "target_redhat" {
   }
 }
 
-resource "aws_instance" "target_windows" {
+/*resource "aws_instance" "target_windows" {
   ami           = "ami-03cf1a25c0360a382"
   instance_type = "t2.small"
   key_name      = "iac-alura"
   tags = {
     Name = "Aqualung-03"
   }
-}
+}*/
