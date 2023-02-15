@@ -1,0 +1,15 @@
+---
+
+#Update Red Hat like
+
+- name: Update system Red Hat
+  yum: name=* state=latest security=yes
+  when: ansible_distribution == 'Rocky' or ansible_distribution == 'RedHat'
+
+#Update Debian like
+
+- name: Update system Debian
+  apt: update_cache=yes upgrade=yes
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+...

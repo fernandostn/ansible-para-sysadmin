@@ -1,0 +1,8 @@
+---
+
+- name: Default Playbook - Starting Deploy
+  hosts: linux
+  roles:
+#    - common
+    - updates
+...

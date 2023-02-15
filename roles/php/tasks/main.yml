@@ -1,0 +1,10 @@
+---
+
+#Instalacao do PHP
+
+- name: Instalacao do pacote PHPl
+  yum:
+    name: php
+    state: latest
+
+...
