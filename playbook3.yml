@@ -1,0 +1,24 @@
+---
+- hosts: redhat
+
+  tasks:
+    - name: Remocao de pacotes
+      yum:
+        name: "{{ packages }}"
+        state: absent
+      vars:
+        packages:
+          - https
+          - nginx
+
+    - name: Instalacao de pacotes
+      yum:
+        name: "{{ packages }}"
+        state: latest
+      vars:
+        packages:
+          - nmap
+          - tcpdump
+          - vim
+
+...
