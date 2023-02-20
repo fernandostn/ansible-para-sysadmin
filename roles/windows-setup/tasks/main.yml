@@ -1,0 +1,34 @@
+---
+- name: Criação de usuários
+  win_domain_user:
+    name: gui
+    firstname: Guilherme
+    surname: Santana
+    company: Familia Santana
+    password: q1w2e3r4t5Q!W@E#R$T%
+    state: present
+    groups:
+      - Domain Admins
+      - Administrators
+
+- name: Copia de arquivos
+  win_copy:
+    src: teste.txt
+    dest: C:\teste.txt
+
+- name: DEsabilitando enhanced exit codes - Chocolatey
+  win_chocolatey_feature:
+    name: useEnhancedExitCodes
+    state: disabled
+
+- name: Instalando Software - Chocolatey
+  win_chocolatey:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - git
+    - firefox
+    - putty
+
+
+...

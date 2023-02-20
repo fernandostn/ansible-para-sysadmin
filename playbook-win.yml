@@ -1,0 +1,4 @@
+- name: Playbook Windows
+  hosts: all
+  roles:
+    - windows-setup

@@ -1,0 +1,4 @@
+- name: Playbook Vault
+  hosts: all
+  roles:
+    - create_user

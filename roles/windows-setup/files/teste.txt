@@ -1,0 +1,2 @@
+Teste de copia de arquivos Ansible - windows
+Módulo win_copy
